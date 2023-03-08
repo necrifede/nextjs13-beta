@@ -2,6 +2,10 @@
 
 This repository is to test the new functionalities of next.js 13 beta.
 
+### TODO
+
+ - [ ] Fix the use of `Image` component from `next/image`.
+
 below README information was generated automatically:
 
 # Generated README:

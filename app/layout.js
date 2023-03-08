@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import './globals.css';
+import { myFont } from './font';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +13,8 @@ export default function RootLayout({ children }) {
       <head>
         <title>Nestor Felipe</title>
       </head>
-      <body>
+      <body className={myFont.variable}>
+      {/* <body> */}
         <Header />
         {children}
       </body>

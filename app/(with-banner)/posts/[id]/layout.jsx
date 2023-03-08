@@ -16,7 +16,7 @@ export default async function PostLayout({ params, children }) {
     <article>
       <h1>{title}</h1>
       <p>{body}</p>
-      {/* TODO: create or update to a back link named as: 'Hide comments' */}
+      {/* TODO: create or update to perform a back link action named as: 'Hide comments' */}
       <Link href={`/posts/${id}/comments`}>See Comments</Link>
       {children}
     </article>

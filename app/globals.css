@@ -85,6 +85,10 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-family: var(--font-grotesk), sans-serif;
+}
+
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
