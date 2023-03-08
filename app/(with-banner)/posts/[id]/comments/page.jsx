@@ -2,6 +2,7 @@ const updateEachMinute = { next: { revalidate: 60 } };
 
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
+  throw new Error('algun err.')
 
   // incremental static generation.
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, updateEachMinute).then((res) => res.json());
