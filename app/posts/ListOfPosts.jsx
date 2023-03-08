@@ -3,7 +3,9 @@ import { LikeButton } from './LikeButton';
 
 const noCache = { cache: 'no-store' };
 const updateEachMinute = { next: { revalidate: 60 } };
-const fetchPosts = () => {
+const fetchPosts = async () => {
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   // -> getStaticProps
   // return fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
   
