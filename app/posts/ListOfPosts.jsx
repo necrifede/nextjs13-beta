@@ -3,11 +3,20 @@ import { LikeButton } from './LikeButton';
 
 const noCache = { cache: 'no-store' };
 const updateEachMinute = { next: { revalidate: 60 } };
-const fetchPosts = () =>
-  fetch('https://jsonplaceholder.typicode.com/posts', updateEachMinute).then((res) => res.json());
+const fetchPosts = () => {
+  // -> getStaticProps
+  // return fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+  
+  // -> getServerSideProps
+  // return fetch('https://jsonplaceholder.typicode.com/posts', {cache: 'no-store'}).then(res => res.json())
+  
+  // incremental static generation.
+  return fetch('https://jsonplaceholder.typicode.com/posts', updateEachMinute).then((res) => res.json());
+};
 
 export async function ListOfPosts() {
   console.log('FETCHING POSTS!!!!!!');
+
   const posts = await fetchPosts();
 
   return posts.slice(0, 5).map(({ id, title, body }) => (
