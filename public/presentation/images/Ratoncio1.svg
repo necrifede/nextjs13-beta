@@ -46,13 +46,6 @@
 		c-2.813-3.293-3.262-11.694-0.982-15.71c10.006-17.589,42.548-17.803,53.833-0.954
 		C368.771,286.547,369.351,289.344,369.755,290.375z"/>
 </g>
-<rect x="113.666" y="78.05" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="262.827" height="224.246"/>
-<text transform="matrix(1 0 0 1 113.666 210.2778)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="209.2251">C</text>
-<g>
-	<rect x="234.975" y="78.05" fill="none" width="262.831" height="224.246"/>
-	
-		<text transform="matrix(-1 0 0 1 497.8037 210.2778)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="209.2251">C</text>
-</g>
 <g>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#1A1A18" stroke="#FFFFFF" stroke-miterlimit="10" d="M318.389,334.34
 		c1.305-1.605,2.867-1.879,4.365-0.782c1.498,1.1,1.387,3.028,1.023,4.933c-0.908,4.803-2.521,9.13-5.244,12.732
@@ -65,5 +58,12 @@
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M318.389,334.34
 		c-4.584,5.745-9.684,10.443-16.345,11.109c-7.906,0.79-13.898-4.128-19.086-11.059c3.211,0.694,6.407,1.531,9.635,2.053
 		c8.101,1.309,16.103,0.468,23.99-2.193C317.186,334.047,317.814,333.384,318.389,334.34z"/>
+</g>
+<rect x="119.941" y="89.053" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="262.826" height="224.246"/>
+<text transform="matrix(1 0 0 1 119.9414 202.811)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="180">C</text>
+<g>
+	<rect x="241.25" y="89.053" fill="none" width="262.83" height="224.246"/>
+	
+		<text transform="matrix(-1 0 0 1 504.0791 202.811)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="180">C</text>
 </g>
 </svg>

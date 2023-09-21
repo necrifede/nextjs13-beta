@@ -58,11 +58,11 @@
 	</g>
 	<rect x="112.658" y="78.05" fill-rule="evenodd" clip-rule="evenodd" fill="none" width="262.826" height="224.246"/>
 	
-		<text transform="matrix(1 0 0 1 112.6582 210.2778)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="209.2251">C</text>
+		<text transform="matrix(1 0 0 1 112.6582 191.8076)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="180">C</text>
 	<g>
 		<rect x="233.967" y="78.05" fill="none" width="262.83" height="224.246"/>
 		
-			<text transform="matrix(-1 0 0 1 496.7959 210.2778)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="209.2251">C</text>
+			<text transform="matrix(-1 0 0 1 496.7959 191.8076)" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" font-family="'Monospace'" font-size="180">C</text>
 	</g>
 </g>
 </svg>
