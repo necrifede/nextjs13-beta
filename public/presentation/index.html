@@ -93,6 +93,9 @@
         opacity: 0;
         /* z-index: 2; */
       }
+      #copyrange {
+        appearance: slider-vertical;
+      }
       /* .textcopy:hover .right {
         display: none;
         transition: all 0.5s;
@@ -126,7 +129,7 @@
               type="range"
               oninput="updateCopySlider(this.value);"
               value="0"
-			  style="width: 65%; height: 7rem;"
+              style="width: 65%; height: 12rem"
             />
           </div>
         </section>
@@ -155,9 +158,9 @@
         const copyrightlogo = document.getElementById("copyrightlogo");
         textright.style.opacity = (100 - val) / 100;
         textleft.style.opacity = val / 100;
-		// 0  1  2 ... 25 ... 50 ... 100
-		// 0       ... 45    90     180
-		copyrightlogo.style.transform = `rotateY(${(val / 100) * 180}deg)`; 
+        // 0  1  2 ... 25 ... 50 ... 100
+        // 0       ... 45    90     180
+        copyrightlogo.style.transform = `rotateY(${(val / 100) * 180}deg)`;
       }
     </script>
   </body>
