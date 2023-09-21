@@ -182,7 +182,7 @@
           </p>
           <div>
             <img
-              style="margin: -15rem auto"
+              style="margin: -17rem auto"
               src="images/Burbu2.svg"
               alt="bobbles"
             />
@@ -194,7 +194,7 @@
         <section>
           <h2>Copyleft</h2>
           <p>
-            is the name given to the copyright type that, unlike ordinary
+            Is the name given to the copyright type that, unlike ordinary
             copyrights, provides the original right to work that they can change
             and distribute to people as they wish, provided that they are
             protected in the modified copy of the same right. Copyleft software
@@ -203,7 +203,7 @@
           </p>
           <div>
             <img
-              style="margin: -15rem auto"
+              style="margin: -17rem auto"
               src="images/Burbu2.svg"
               alt="bobbles"
             />
@@ -222,7 +222,7 @@
           </p>
           <div>
             <img
-              style="margin: -15rem auto"
+              style="margin: -17rem auto"
               src="images/Burbu2.svg"
               alt="bobbles"
             />
@@ -241,7 +241,7 @@
 
           <div>
             <img
-              style="margin: -15rem auto"
+              style="margin: -17rem auto"
               src="images/Burbu2.svg"
               alt="bobbles"
             />
@@ -264,7 +264,7 @@
 
           <div>
             <img
-              style="margin: -15rem auto"
+              style="margin: -17rem auto"
               src="images/Burbu2.svg"
               alt="bobbles"
             />
@@ -274,12 +274,14 @@
           </div>
         </section>
         <section>
-			<div style="font-size: 9rem;">
-
-				Thanks
-			</div>
+          <div style="font-size: 9rem">Thanks</div>
           <div style="">
-            <img src="images/Ratoncio.svg" alt="sweet mouse" height="300" />
+            <img
+              id="endraton"
+              src="images/Ratoncio.svg"
+              alt="sweet mouse"
+              height="300"
+            />
           </div>
         </section>
       </div>
@@ -310,6 +312,18 @@
         // 0       ... 45    90     180
         copyrightlogo.style.transform = `rotateY(${(val / 100) * 180}deg)`;
       }
+
+      let value = 1;
+
+      const endraton = document.getElementById("endraton");
+
+      setInterval(() => {
+        endraton.src = `images/Ratoncio${value}.svg`;
+        value += 1;
+        if (value === 5) {
+          value = 1;
+        }
+      }, 300);
     </script>
   </body>
 </html>
