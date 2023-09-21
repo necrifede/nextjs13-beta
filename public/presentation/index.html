@@ -1,40 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+    <link rel="stylesheet" href="dist/theme/white.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <style>
+      .makeit {
+        font-size: 7rem;
+      }
+      .visible {
+        font-family: monospace;
+        font-weight: bold;
+        letter-spacing: 0.5em;
+        /* flex-wrap: nowrap;
+        opacity: 0; */
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 7rem;
+      }
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      .overlap {
+        font-size: 7rem;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        opacity: 1;
+        font-weight: bolder;
+        font-stretch: expanded;
+        color: goldenrod;
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        transition: opacity 0.5s, visibility 0.5s;
+        /* visibility: hidden; */
+        /* opacity: 0;*/
+      }
+      .overlap:hover {
+        opacity: 0;
+        transition: opacity 1s, visibility 1s;
+        color: goldenrod;
+      }
+
+      /* slide 2 */
+      .slide2 {
+        font-family: monospace, "Courier New", Courier;
+        font-weight: bolder;
+        font-size: 7rem;
+      }
+      #copyrightlogo {
+        /* font-size: 100px; */
+        font-size: 12rem;
+        transition: all 0.5s;
+      }
+      /* .copyrightlogo:hover {
+        transform: rotateY(180deg);
+        transition: all 0.5s;
+      } */
+      .textcopy {
+        text-align: center;
+        /* display: flex; */
+        /* flex-direction: row; */
+        margin: auto 0;
+        text-align: center;
+      }
+
+      .textcopy .right {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        /* opacity: 0.2; */
+      }
+      #textleft {
+        position: absolute;
+        /* top: 0; */
+        /* right: 0; */
+        left: 0;
+        width: 100%;
+        margin: 0;
+        opacity: 0;
+        /* z-index: 2; */
+      }
+      /* .textcopy:hover .right {
+        display: none;
+        transition: all 0.5s;
+      }
+      .textcopy:hover .left {
+        display: inline;
+        opacity: 1;
+        transition: all 0.5s;
+      } */
+    </style>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <p class="makeit">Let's make it</p>
+          <div class="visible">
+            visible
+            <div class="overlap">
+              &#9632;&#9632;&#9632;&#9632;&#9632;&#9632;&#9632;
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="slide2">
+            <div id="copyrightlogo">&copy;</div>
+            <div class="textcopy">
+              copy<span id="textright" class="right">right</span
+              ><span id="textleft" class="left">copyleft&nbsp;</span>
+            </div>
+            <input
+              id="copyrange"
+              type="range"
+              oninput="updateCopySlider(this.value);"
+              value="0"
+            />
+          </div>
+        </section>
+        <section>blabla</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      function updateCopySlider(val) {
+        const textright = document.getElementById("textright");
+        const textleft = document.getElementById("textleft");
+        const copyrightlogo = document.getElementById("copyrightlogo");
+        textright.style.opacity = (100 - val) / 100;
+        textleft.style.opacity = val / 100;
+		// 0  1  2 ... 25 ... 50 ... 100
+		// 0       ... 45    90     180
+		copyrightlogo.style.transform = `rotateY(${(val / 100) * 180}deg)`; 
+      }
+    </script>
+  </body>
 </html>
